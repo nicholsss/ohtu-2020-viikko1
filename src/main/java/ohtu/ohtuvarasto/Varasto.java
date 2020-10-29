@@ -64,7 +64,7 @@ public class Varasto {
     public double otaVarastosta(double maara) {
         if (maara < 0) // virhetilanteessa voidaan tehdä 
         {
-            return 0.1;   // tällainen pikapoistuminenkin!
+            return 0.0;   // tällainen pikapoistuminenkin!
         }
         if (maara > saldo) {          // annetaan mitä voidaan
             double kaikkiMitaVoidaan = saldo;
@@ -78,6 +78,6 @@ public class Varasto {
 
     // --- Merkkijonoesitys Varasto-oliolle: ----
     public String toString() {
-        return ("saldo = " + saldo + ", vielä tilaa " + paljonkoMahtuu());
+        return ("saldos = " + saldo + ", vielä tilaa " + paljonkoMahtuu());
     }
 }
